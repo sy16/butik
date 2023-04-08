@@ -240,6 +240,25 @@
     $(".btntamu").click(function() {
     $('html,body').animate({
         scrollTop: $(".kotak").offset().top});
+      });
+
+$(document).on('click', '.btn_hapus', function(){
+  var id = $(this).attr("id")
+
+  $.ajax({
+url:'views/tamu/hapus.php',
+method:'POST',
+data: {
+  id:id
+},
+beforeSend:function(){
+return confirm("Yakin Ingin Menghapus Data ?");
+},
+success: function(){
+load_data();
+}
+  });
+
 });
 
 function load_data() {
