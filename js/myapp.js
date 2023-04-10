@@ -14,6 +14,7 @@ $(document).on("click", "#add_tamu", function () {
   $.ajax({
     url: "views/tamu/add_tamu.php",
     method: "POST",
+    dataType: "JSON",
     data: {
       nik: nik,
       nama: nama,
@@ -32,8 +33,9 @@ $(document).on("click", "#add_tamu", function () {
       $("#no_hp").val("");
       $("#action").val("");
 
-      $(".add_tamu").load("views/kunjungan/add_kunjungan.php");
-      // console.log(data);
+      $(".add_tamu").load("views/kunjungan/add_kunjungan.php?nik=" + data.nik);
+
+      console.log(data);
       // alert("pause");
     },
     error: function (data) {
@@ -82,7 +84,7 @@ $(document).on("click", "#add_kunjungan", function () {
       keperluan: keperluan,
       act_kunjungan: act_kunjungan,
     },
-    success: function (data) {
+    success: function () {
       console.log("Sukses fungsi ajax");
       // console.log(data);
       // alert("pause success");

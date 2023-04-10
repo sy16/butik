@@ -34,7 +34,7 @@ if (isset($_POST["act_kunjungan"])) {
                         <div class="field">
               <label class="label">NIK</label>
               <div class="control">
-                <input class="input" type="text" name="nik" placeholder="Nik" id="nik">
+                <input class="input" type="text" name="nik" placeholder="Nik" id="nik" value="<?= $_GET['nik'] ?>">
               </div>
             <div class="field">
               <label class="label">tgl_kunjung</label>

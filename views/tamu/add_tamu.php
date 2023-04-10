@@ -18,13 +18,24 @@ $no_hp = $_POST['no_hp'];
     // var_dump($connect);
     // echo "<br> $res <br>";
 
-
-    if ($res) {
-        echo "data berhasil disimpan";
+        if ($res) {
+        $status= "data berhasil disimpan";
+        // echo "{nik :$nik}";
     } else {
-        echo "data gagal disimpan";
+        $status= "data gagal disimpan";
     }
-}
+
+    $response = array(
+      "status"=> $status,
+      "nik"=>$nik
+    );
+
+    echo json_encode($response);
+
+
+
+} 
+else {
 ?>
 
 
@@ -64,3 +75,7 @@ $no_hp = $_POST['no_hp'];
               <a class="button is-primary" name="add_tamu" id="add_tamu">Simpan Tamu</a>
             </div>
           </form>
+
+          <?php
+}
+?>
