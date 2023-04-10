@@ -2,8 +2,41 @@
 
 include("../../config/connection.php");
 
-$query="SELECT *FROM tamu ORDER BY id_tamu ASC";
+$batas = 5;
+// $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+$halaman=1;
+$previous = $halaman - 1;
+$next = $halaman + 1;
+
+$data= mysqli_query($connect,"SELECT *FROM tamu");
+$jumlah_data = mysqli_num_rows($data);
+$total_halaman = ceil($jumlah_data/$batas);
+
+// echo $_post['halaman'];
+if (isset($_POST["action"])) {
+
+  if($_POST['act_name']=="next" && $halaman < $total_halaman) {
+  $halaman=$next;
+  }
+
+  else if($_POST['act_name']=="previous" && $halaman > 1){ 
+    $halaman=$previous;
+  }
+
+  else if($_POST['act_name']=="num_page"){ 
+    $halaman=(INT)$_POST['action'];
+  }
+}
+
+$halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+// $halaman_awal = 6;	
+
+
+// echo $halaman;
+$query="SELECT *FROM tamu ORDER BY id_tamu ASC LIMIT $halaman_awal, $batas";
 $res=mysqli_query($connect, $query);
+$nomor = $halaman_awal+1;
+
 
 $output="";
 
@@ -28,6 +61,7 @@ if (mysqli_num_rows($res) < 1) {
       ";
 }
 
+//perulangan membuat list data
 $no = 1;
 while ($row = mysqli_fetch_array($res)) {
 $output .="      
@@ -53,6 +87,31 @@ $no++;
 }
 
 $output .= "    </tbody>
-                </table>";
+                </table>
+<nav>
+<ul class='pagination justify-content-center'>
+  <li class='page-item'>
+
+  <a  class='page-link act' id='". $halaman ."' name='previous'>Previous</a>
+  </li> ";
+
+  for($x=1;$x<=$total_halaman;$x++){
+    $output .="
+    <li class='page-item'><a class='page-link act' id=". $x ."' name='num_page'>". $x ."</a></li>
+    ";    
+  }
+
+
+  $output .="		
+  <li class='page-item'>
+    <a  class='page-link act' id='". $halaman ."' name='next'>Next</a>
+  </li>
+</ul>
+</nav> ";
+
 echo $output;
-  ?>
+
+
+?>
+
+

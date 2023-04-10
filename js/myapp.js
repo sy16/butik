@@ -105,6 +105,29 @@ $(document).on("click", "#add_kunjungan", function () {
   });
 });
 
+$(document).on("click", ".act", function () {
+  action = $(this).attr("id");
+  act_name = $(this).attr("name");
+  // alert(act_name);
+
+  $.ajax({
+    url: "views/tamu/load_data.php",
+    method: "POST",
+    data: {
+      action: action,
+      act_name: act_name,
+    },
+    error: function (data) {
+      console.log(data.responseText);
+      alert("pause success");
+    },
+    success: function (data) {
+      console.log("sukses ajax");
+      $(".result").html(data);
+    },
+  });
+});
+
 function load_data() {
   // alert("Versi Demo") ;
   $.ajax({
