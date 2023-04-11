@@ -7,7 +7,7 @@ $(document).on("click", "#add_tamu", function () {
   var nik = $("#nik").val();
   var nama = $("#nama").val();
   var satuan_kerja = $("#satuan_kerja").val();
-  var kabupaten = $("#kabupaten").val();
+  var alamat = $("#alamat").val();
   var no_hp = $("#no_hp").val();
   var action = $("#action").val();
 
@@ -19,7 +19,7 @@ $(document).on("click", "#add_tamu", function () {
       nik: nik,
       nama: nama,
       satuan_kerja: satuan_kerja,
-      kabupaten: kabupaten,
+      alamat: alamat,
       no_hp: no_hp,
       action: action,
     },
@@ -29,7 +29,7 @@ $(document).on("click", "#add_tamu", function () {
       $("#nik").val("");
       $("#nama").val("");
       $("#satuan_kerja").val("");
-      $("#kabupaten").val("");
+      $("#alamat").val("");
       $("#no_hp").val("");
       $("#action").val("");
 

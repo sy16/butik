@@ -37,28 +37,28 @@ if (isset($_POST["act_kunjungan"])) {
                 <input class="input" type="text" name="nik" placeholder="Nik" id="nik" value="<?= $_GET['nik'] ?>">
               </div>
             <div class="field">
-              <label class="label">tgl_kunjung</label>
+              <label class="label">Tanggal Kunjungan</label>
               <div class="control">
-                <input class="input" type="date" name="tgl_kunjung" placeholder="tgl_kunjung" id="tgl_kunjung">
+                <input class="input" type="date" name="Tanggal Kunjungan" placeholder="tgl_kunjung" id="tgl_kunjung">
               </div>
             </div>
 
             <div class="field">
-              <label class="label">jam_kunjung</label>
+              <label class="label">Waktu Kunjungan</label>
               <div class="control">
-                <input class="input" type="time" name="jam_kunjung" placeholder="Jam Kunjung" id="jam_kunjung">
+                <input class="input" type="time" name="Waktu Kunjungan" placeholder="Jam Kunjung" id="jam_kunjung">
               </div>
             </div>
             <div class="field">
               <label class="label">JML Rombongan</label>
               <div class="control">
-                <input class="input" type="text" name="jml_rombongan" placeholder="jml_rombongan" id="jml_rombongan">
+                <input class="input" type="text" name="jml_rombongan" placeholder="Jumlah Rombongan" id="jml_rombongan">
               </div>
             </div>
             <div class="field">
-              <label class="label">keperluan</label>
+              <label class="label">Keperluan</label>
               <div class="control">
-                <input class="input" type="text" name="keperluan" placeholder="keperluan" id="keperluan">
+                <input class="input" type="text" name="keperluan" placeholder="Keperluan" id="keperluan">
               </div>
             </div>
             <div class="control">

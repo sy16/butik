@@ -47,7 +47,7 @@ $output .="
         <th>#</th>
         <th>Nama</th>
         <th>Satuan Kerja</th>
-        <th>Kabupaten</th>
+        <th>Alamat</th>
         <th> </th>
       </tr>
     </thead>
@@ -69,7 +69,7 @@ $output .="
         <th>". $no ."</th>
         <td>" . $row['nama'] . "</td>
         <td>" . $row['satuan_kerja'] . "</td>
-        <td>" . $row['kabupaten'] . "</td>
+        <td>" . $row['alamat'] . "</td>
         <td>
         <div class='col-md-12'>
         <div class='row'>

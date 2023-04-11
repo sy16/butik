@@ -5,18 +5,19 @@ if (isset($_POST["action"])) {
    
 $nik = $_POST['nik'];
 $nama = $_POST['nama'];
-$kabupaten = $_POST['kabupaten'];
+$alamat = $_POST['alamat'];
 $satuan_kerja = $_POST['satuan_kerja'];
 $no_hp = $_POST['no_hp'];
 
     $query = "INSERT INTO tamu(nik,nama,jk,alamat,provinsi,kabupaten,pekerjaan,satuan_kerja,no_hp)
-    values('$nik','$nama','','','','$kabupaten','','$satuan_kerja','$no_hp')";
+    values('$nik','$nama','','$alamat','','','','$satuan_kerja','$no_hp')";
 
     // echo "<br>$query <br>";
     // die();
     $res = mysqli_query($connect, $query);
     // var_dump($connect);
     // echo "<br> $res <br>";
+
 
         if ($res) {
         $status= "data berhasil disimpan";
@@ -28,6 +29,7 @@ $no_hp = $_POST['no_hp'];
     $response = array(
       "status"=> $status,
       "nik"=>$nik
+      // "res"=>$query,
     );
 
     echo json_encode($response);
@@ -59,9 +61,9 @@ else {
               </div>
             </div>
             <div class="field">
-              <label class="label">Kabupaten Asal</label>
+              <label class="label">Alamat</label>
               <div class="control">
-                <input class="input" type="text" name="kabupaten" placeholder="Tempat Asal" id="kabupaten">
+                <input class="input" type="text" name="alamat" placeholder="Alamat" id="alamat">
               </div>
             </div>
             <div class="field">
