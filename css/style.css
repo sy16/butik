@@ -1,105 +1,104 @@
 body {
-    font-family: 'segoe UI';
+  font-family: "segoe UI";
 }
 
 .navbar {
-    border-bottom: solid 1px #707070;
-    
+  border-bottom: solid 1px #707070;
 }
 
 section {
-    background-color: #d0e2fa;
+  background-color: #d0e2fa;
 }
 
 footer {
-    /* display: inline-block; */
-    /* overflow: scroll; */
-    /* background-color: lightgrey; */
-    /* clear: both; */
-    /* position: fixed; */
-    font-size: 30;
-    font-weight: regular;
+  /* display: inline-block; */
+  /* overflow: scroll; */
+  /* background-color: lightgrey; */
+  /* clear: both; */
+  /* position: fixed; */
+  font-size: 30;
+  font-weight: regular;
 }
 
 .kotak {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
 }
 
 .circle-img img {
-    height: 400px;
-    transform: translateX(-50%);
-    margin-left: 50%;
-    /* margin: auto;     */
-    /* display: block; */
-    margin-top: 70px;
-    
-  }
-
-.Head img {
-height: 306.14px;
-width: 333.35px;
-margin-top: 23.93px;
+  height: 400px;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  /* margin: auto;     */
+  /* display: block; */
+  margin-top: 70px;
 }
 
-.Head h2, .form h2 {
-    font-weight: normal;
-    font-size: 50;
-    color: #707070;
-    opacity: 1px;
-    padding: 5px;
+.Head img {
+  height: 306.14px;
+  width: 333.35px;
+  margin-top: 23.93px;
+}
+
+.Head h2,
+.form h2 {
+  font-weight: normal;
+  font-size: 50;
+  color: #707070;
+  opacity: 1px;
+  padding: 5px;
 }
 
 .Head p {
-    font-weight: normal;
-    font-size: 40;
-    color: #707070;
-    opacity: 1px;
+  font-weight: normal;
+  font-size: 40;
+  color: #707070;
+  opacity: 1px;
 }
 
 .form .btn {
-    /* margin-top: 10px; */
-    background-color: #ffff;
-    color: #959CA5;
-    margin-bottom: 400px;
+  /* margin-top: 10px; */
+  background-color: #ffff;
+  color: #959ca5;
+  margin-bottom: 400px;
 }
 
 .header .btn {
-    width: 300px;
-    
+  width: 300px;
 }
 
-.header h6, .body h6 {
-    color: #707070;
+.header h6,
+.body h6 {
+  color: #707070;
 }
 
 /* login */
 .container-login {
-    width: 35%;
-    margin-top: 5%;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
-    padding: 40px;
+  width: 35%;
+  margin-top: 5%;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+  padding: 40px;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    width: 40px;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 40px;
+}
 
-  .pesan{
-      color: red;
-      font-size: 15px;
-      margin-top: 30px;
-      margin-bottom: 0px;
-      padding-bottom: 0;
+.pesan {
+  color: red;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
 
-  }
-
-  hr {
-      margin-top: 3px;
-  }
+hr {
+  margin-top: 3px;
+}

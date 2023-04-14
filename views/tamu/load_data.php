@@ -109,6 +109,10 @@ $output .= "    </tbody>
 </ul>
 </nav> ";
 
+$output .= "
+<button id='cetak' class='btn btn-success btn_cetak' >Cetak Laporan</button>
+";
+
 echo $output;
 
 
