@@ -161,12 +161,26 @@
   <div class="kotak col-sm-12 col-lg-8 col-md-10 shadow-lg p-3 mb-5 bg-body rounded">
   <div class="result"></div>
   
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Cetak Laporan
-  </button>
+
 </div>
 </div>
 <!-- //form tamu -->
+
+
+<!-- form laporan -->
+
+<div class="tamu">
+
+  <div class="kotak col-sm-12 col-lg-8 col-md-10 shadow-lg p-3 mb-5 bg-body rounded">
+    <button type="button" class="btn btn-primary btn_laporan">
+      Cetak Laporan
+    </button>
+  <div class="laporan"></div>
+  
+</div>
+</div>
+<!-- //form laporan -->
+
 
      <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -228,6 +242,20 @@
     $(".btntamu").click(function() {
     $('html,body').animate({
         scrollTop: $(".kotak").offset().top});
+      });
+   
+      $(document).on('click', '.btn_laporan', function() {
+// window.location.href="views/laporan/load_data.php";
+$('.laporan').load('views/laporan/load_data.php');
+$('.laporan').show();
+$(this).hide();
+      });
+
+      $(document).on('click', '.btn_cls_laporan', function() {
+// window.location.href="views/laporan/load_data.php";
+$('.laporan').hide();
+$('.btn_laporan').show();
+
       });
 
 
