@@ -109,13 +109,15 @@ $output .= "    </tbody>
 </ul>
 </nav> ";
 
-$output .= "
-<button id='cetak' class='btn btn-success btn_cetak' >Cetak Laporan</button>
-";
+
 
 echo $output;
 
-
+// $output .= "
+// <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+//   Launch demo modal
+// </button>
+// ";
 ?>
 
 

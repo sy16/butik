@@ -160,12 +160,47 @@
 <div class="tamu">
   <div class="kotak col-sm-12 col-lg-8 col-md-10 shadow-lg p-3 mb-5 bg-body rounded">
   <div class="result"></div>
+  
 
 </div>
 </div>
-
-
 <!-- //form tamu -->
+
+
+<!-- form laporan -->
+
+<div class="tamu">
+
+  <div class="kotak col-sm-12 col-lg-8 col-md-10 shadow-lg p-3 mb-5 bg-body rounded">
+    <button type="button" class="btn btn-primary btn_laporan">
+      Laporan Pengunjung
+    </button>
+  <div class="laporan"></div>
+  
+</div>
+</div>
+<!-- //form laporan -->
+
+
+     <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- /modal -->
 
     <!-- footer -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
@@ -207,6 +242,28 @@
     $(".btntamu").click(function() {
     $('html,body').animate({
         scrollTop: $(".kotak").offset().top});
+      });
+   
+      $(document).on('click', '.btn_laporan', function() {
+// window.location.href="views/laporan/load_data.php";
+$('.laporan').load('views/laporan/load_data.php');
+$('.laporan').show();
+$(this).hide();
+      });
+
+      $(document).on('click', '.btn_cls_laporan', function() {
+// window.location.href="views/laporan/load_data.php";
+$('.laporan').hide();
+$('.btn_laporan').show();
+
+      });
+
+      $(document).on('click', '.btn_exp_laporan', function() {
+// window.location.href="views/laporan/export_pdf.php";
+window.open('views/laporan/export_pdf.php', '_blank');
+// $('.laporan').hide();
+// $('.btn_laporan').show();
+
       });
 
 
