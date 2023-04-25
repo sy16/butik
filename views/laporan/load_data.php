@@ -47,3 +47,6 @@ while($row = mysqli_fetch_array($res)){
 <button type="button" class="btn btn-danger btn_cls_laporan">
       Close Laporan
     </button>
+<button type="button" class="btn btn-success btn_exp_laporan">
+      Cetak Laporan
+    </button>

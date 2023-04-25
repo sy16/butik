@@ -173,7 +173,7 @@
 
   <div class="kotak col-sm-12 col-lg-8 col-md-10 shadow-lg p-3 mb-5 bg-body rounded">
     <button type="button" class="btn btn-primary btn_laporan">
-      Cetak Laporan
+      Laporan Pengunjung
     </button>
   <div class="laporan"></div>
   
@@ -255,6 +255,14 @@ $(this).hide();
 // window.location.href="views/laporan/load_data.php";
 $('.laporan').hide();
 $('.btn_laporan').show();
+
+      });
+
+      $(document).on('click', '.btn_exp_laporan', function() {
+// window.location.href="views/laporan/export_pdf.php";
+window.open('views/laporan/export_pdf.php', '_blank');
+// $('.laporan').hide();
+// $('.btn_laporan').show();
 
       });
 
